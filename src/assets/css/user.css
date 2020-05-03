@@ -1,0 +1,174 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+ul,li{
+    list-style:none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+#user{
+    width:100%;
+    height:100vh;
+    background:#fff;
+    position: relative;
+}
+#user .nav{
+    position: fixed;
+    z-index:10;
+    top:0;
+    left:0;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding:8px 20px;
+    background:linear-gradient(135deg,#00d7ff 10%,#00a8ff 100%);
+    color:#fff;
+}
+#user .nav .left{
+    font-size:30px;
+}
+#user .nav .mid{
+    flex:1;
+    text-align:center;
+    font-size:18px;
+}
+#user .nav .right{
+    opacity:0;
+}
+#user .list{
+    background:#fff;
+    padding-top:66px;
+}
+#user .list>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:17px 20px;
+}
+#user .list>div .left{
+    font-size:16px;
+    margin-right:15px;
+}
+#user .list>div .mid{
+    flex:1;
+    width:80%;
+    color:#524a4a;
+}
+#user .list>div .right{
+    font-size:20px;
+    color:#777;
+    margin-left:10px;
+}
+#user .list .icon{
+    padding:5px 20px;
+}
+#user .list .icon .mid{
+    position: relative;
+}
+#user .list .icon .mid .upbtn{
+    position: absolute;
+}
+#user .list .icon .mid img{
+    display:block;
+    border-radius:10px;
+}
+#user .list .sign .mid{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+#user .regi{
+    border-bottom:1px solid #eee;
+}
+#user .pwd{
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+#user .pwd .mid{
+    font-size:12px;
+    letter-spacing:2px;
+    color:#000!important;
+}
+
+#user .footer{
+    padding:20px 0;
+    width:100%;
+    text-align:center;
+    background:#fff;
+}
+#user .footer a{
+    color:#3EBBE6;
+}
+
+#user .sign-modify{
+    position: fixed;
+    left:0;
+    bottom:0;
+    z-index:11;
+    height:100vh;
+    width:100%;
+    background:#fff;
+}
+#user .sign-modify .topbar{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding:13px 20px;
+    background:#fff;
+    border-bottom:1px solid #eee;
+    color:#222;
+}
+#user .sign-modify .topbar .mid{
+    flex:1;
+    font-size:20px;
+    text-align:center;
+}
+#user .sign-modify .topbar .right{
+    color:#4aaaff;
+}
+#user .sign-modify .content{
+    margin-top:20px;
+    padding:0 20px;
+    width:100%;
+}
+#user .sign-modify .content .pwd{
+    background:#f3f4f6;
+    border:0;
+    outline:0;
+    width:100%;
+    border-radius:10px;
+    font-size:16px;
+    padding:10px;
+    margin-bottom:20px;
+}
+#user .sign-modify .content .content-msg{
+    background:#f3f4f6;
+    border:0;
+    outline:0;
+    width:100%;
+    height:35vh;
+    padding:10px;
+    font-size:16px;
+    resize:none;
+    border-radius:10px;
+}
+
+.fade{
+    position: fixed;
+    width:100%;
+}
+.fade-enter-active {
+    animation: popup .5s;
+}
+.fade-leave-active {
+    animation: popup .5s reverse;
+}
+
+@keyframes popup{
+    0% {bottom:-80vh}
+    100% {bottom:0px}
+}

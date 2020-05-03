@@ -3,14 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --host 127.0.0.1 --port 8080",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
+    "luxon": "^1.23.0",
+    "socket.io-client": "^2.3.0",
+    "swiper": "^5.3.8",
     "vue": "^2.6.11",
-    "vue-router": "^3.1.6"
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-cropper-h5": "^1.2.0",
+    "vue-datetime": "^1.0.0-beta.13",
+    "vue-pickers": "^2.4.1",
+    "vue-router": "^3.1.6",
+    "vue-socket.io": "^3.0.8",
+    "weekstart": "^1.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",

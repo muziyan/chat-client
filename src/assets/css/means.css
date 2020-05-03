@@ -1,0 +1,221 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+ul,li{
+    list-style:none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+#means{
+    width:100%;
+    min-height:100vh;
+}
+#means .bg{
+    position: fixed;
+    z-index:-10;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+#means .bg img{
+    opacity:0.4;
+    width:110%;
+    height:110%;
+    position: absolute;
+    left:-10px;
+    top:-10px;
+    object-fit: cover;
+    filter:blur(12px);
+}
+#means .topbar .nav{
+    padding:8px 20px 8px 20px;
+    display: flex;
+    align-items:center;
+    color:#000;
+}
+#means .topbar .nav .back{
+    font-size:30px;
+}
+#means .topbar .nav .end{
+    flex:1;
+}
+#means .topbar .nav .me{
+    font-size:24px;
+}
+#means .data{
+    margin-top:40px;
+    width:100%;
+    padding:0 20px;
+    display:flex;
+}
+#means .data .top{
+    width:100%;
+    text-align: center;
+}
+#means .data .top .top-img{
+    display:inline-block;
+    position: relative;
+    z-index:10;
+}
+#means .data .top i{
+    position: absolute;
+    bottom:6px;
+    right:6px;
+    color:#fff;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    border-radius:100%;
+}
+#means .data .top .fa-venus-mars{
+    background:#222;
+}
+#means .data .top .fa-mars{
+    background:#2688e4;
+}
+#means .data .top .fa-venus{
+    background:pink;
+}
+#means .data .top img{
+    display: block;
+    width:180px;
+    height:180px;
+    border-radius:20px;
+    border:3px solid #fff;
+}
+#means .sign{
+    margin-top:20px;
+}
+#means .sign .name{
+    text-align: center;
+    font-size:24px;
+    color:#222;
+}
+#means .sign .user{
+    text-align: center;
+    font-size:14px;
+    color:#222;
+}
+#means .sign .sentence{
+    font-size:16px;
+    margin-top:20px;
+    text-indent:32px;
+    line-height:1.7;
+    padding:0 40px;
+    color:#272832;
+}
+#means .add-friend{
+    position:fixed;
+    bottom:20px;
+    left:0;
+    width:100%;
+    padding:0 20px;
+}
+#means .add-friend a{
+    display: block;
+    padding:10px 0;
+    border-radius:5px;
+    text-align: center;
+    background:#2688e4;
+    color:#fff;
+}
+#means .add-misg{
+    width:100%;
+    height:80vh;
+    background:#fff;
+    position: fixed;
+    bottom:0;
+    border-radius:20px 20px 0 0;
+    padding:0 20px;
+    transition:all 0.5s;
+    z-index:11;
+}
+#means .add-misg .icon{
+    position: absolute;
+    top:-10vh;
+    left:34vw;
+}
+#means .add-misg .icon img{
+    width:120px;
+    height:120px;
+    display: block;
+    border-radius:100%;
+    border:3px solid #fff;
+    box-shadow:0px 18px 20px 0px rgba(39,40,50,0.1);
+}
+#means .add-misg .name{
+    padding-top:80px;
+    font-size:24px;
+    color:#222;
+    text-align:center;
+}
+#means .add-misg .add{
+    margin-top:20px;
+    width:100%;
+    background:#f3f4f6;
+    border:0;
+    outline:0;
+    height:35vh;
+    padding:10px;
+    font-size:16px;
+    resize:none;
+    border-radius:10px;
+}
+#means .btn{
+    position:fixed;
+    bottom:20px;
+    left:0;
+    width:100%;
+    padding:0 20px;
+    display: flex;
+    z-index:12;
+}
+#means .btn .close{
+    width:25%;
+    background:rgba(39, 40, 50, 0.1);
+    padding:10px 0;
+    border-radius:5px;
+    text-align: center;
+    color:#222;
+    margin-right:20px;
+}
+#means .btn .send{
+    flex:1;
+    padding:10px 0;
+    border-radius:5px;
+    text-align: center;
+    background:#2688e4;
+    color:#fff;
+}
+.fade{
+    position: fixed;
+    width:100%;
+}
+.fade-enter-active {
+    animation: add .8s;
+}
+.fade-leave-active {
+    animation: add .8s reverse;
+}
+.made{
+    position: fixed;
+    width:100%;
+}
+.made-enter-active {
+    animation:btn .8s;
+}
+.made-leave-active {
+    animation:btn .8s reverse;
+}
+@keyframes add{
+    0% {bottom:-80vh}
+    100% {bottom:0px}
+}
+@keyframes btn{
+    0% {bottom:-60px}
+    100% {bottom:20px}
+}

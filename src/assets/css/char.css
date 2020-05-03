@@ -1,0 +1,214 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:rgba(0,0,0,0); 
+}
+ul,li{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration:none;
+}
+#char{
+    width:100%;
+    height:100vh;
+}
+#char .header{
+    z-index:999;
+    background:linear-gradient(135deg,#00d7ff 10%,#00a8ff 100%);
+    position:fixed;
+    top:0;
+    width:100%;
+}
+#char .nav-container{
+    width:100%;
+    height:56px;
+    padding:8px 20px;
+    display: flex;
+}
+#char .nav-container .back{
+    line-height:40px;
+    font-size:30px;
+}
+#char .nav-container .back a{
+    color:#fff;
+}
+#char .nav-container .title{
+    flex:1;
+    text-align: center;
+}
+#char .nav-container .title span{
+    color:#fff;
+    font-size:18px;
+}
+#char .nav-container .title p{
+    font-size:12px;
+    color:#fff;
+}
+#char .nav-container .means{
+    font-size:20px;
+    line-height:40px;
+}
+#char .nav-container .means a{
+    color:#fff;
+}
+#char .main{
+    width:100%;
+    overflow: hidden;
+    padding:66px 10px 75px 10px;
+    background:#ebedf5;
+}
+#char .main .time{
+    color:#989ba8;
+    text-align:center;
+    font-size:16px;
+}
+#char .main .he,
+#char .main .me{
+    margin:20px 0;
+    position: relative;
+    width:100%;
+    min-height:40px;
+}
+#char .main .icon{
+    display: block;
+    border-radius:100%;
+}
+#char .main .he{
+    display: flex;
+}
+#char .main .he .icon{
+    position: absolute;
+    left:0;
+}
+#char .main .he .comment{
+    position: relative;
+    display: inline-block;
+    z-index:2;
+    margin-left:50px;
+    padding:10px;
+    background:#fff;
+    border-radius:13px;
+    min-width:40px;
+    min-height:40px;
+    max-width:65%;
+}
+#char .main .he .comment::after{
+    content:"";
+    transform:rotate(-15deg);
+    border-bottom: 12px solid #fff;
+    border-left: 0px solid #fff;
+    border-bottom-left-radius: 20px 20px;
+    height:12px;
+	width:20px;
+    position: absolute;
+    z-index:-1;
+    left:-5px;
+    top:2px;
+}
+#char .main .he .comment-img{
+    margin-left:50px;
+}
+#char .main .he .comment-img img{
+    display: block;
+    border-radius:10px;
+    max-width:150px;
+    max-height:150px;
+}
+#char .main .me{
+    display: flex;
+}
+#char .main .me::before{
+    content:"";
+    flex:1;
+}
+#char .main .me .icon{
+    position:absolute;
+    right:0;
+}
+#char .main .me .comment{
+    position: relative;
+    display: inline-block;
+    z-index:2;
+    margin-right:50px;
+    background:#1ebafc;
+    color:#fff;
+    padding:10px;
+    border-radius:13px;
+    min-width:40px;
+    min-height:40px;
+    max-width:65%;
+}
+#char .main .me .comment::after{
+    content:"";
+    transform:rotate(-165deg);
+    border-top: 12px solid #1ebafc;
+    border-left: 0px solid #1ebafc;
+    border-top-left-radius: 20px 20px;
+    height:12px;
+	width:20px;
+    position: absolute;
+    z-index:-1;
+    right:-5px;
+    top:2px;
+}
+#char .main .me .comment-img{
+    margin-right:50px;
+}
+#char .main .me .comment-img img{
+    display: block;
+    border-radius:10px;
+    max-width:150px;
+    max-height:150px;
+}
+#char .footer{
+    width:100%;
+    position: fixed;
+    bottom:0;
+    background:rgba(235, 237, 245, 0.95);
+    z-index:10;
+}
+#char .footer .send-container{
+    width:100%;
+    padding:5px 15px;
+}
+#char .footer form{
+    display: flex;
+}
+#char .footer form input{
+    flex:1;
+    padding:6px 16px;
+    font-size:14px;
+    caret-color:#00cafc;
+    margin-right:5px;
+    outline:none;
+    border:0;
+    border-radius:50px;
+}
+#char .footer form button{
+    padding:6px 16px;
+    border:0;
+    font-size:16px;
+    outline:none;
+    background:#00cafc;
+    color:#fff;
+    border-radius:50px;
+}
+#char .footer .icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#char .footer .icon-container div{
+    flex:1;
+    text-align: center;
+    padding:4px 0;
+    font-size:22px;
+    color:#979EB3;
+}
+#char .footer .icon-container .voice i,
+#char .footer .icon-container .map i,
+#char .footer .icon-container .emoji i{
+    font-size:24px;
+}

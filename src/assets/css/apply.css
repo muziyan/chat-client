@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+ul,li{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration:none;
+}
+#apply{
+    width:100%;
+    height:100vh;
+}
+#apply .nav{
+    padding:8px 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background:linear-gradient(135deg,#00d7ff 10%,#00a8ff 100%);
+    color:#fff;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:56px;
+    z-index:10;
+}
+#apply .nav .left{
+    font-size:30px;
+}
+#apply .nav .mid{
+    flex:1;
+    text-align: center;
+    font-size:18px;
+}
+#apply .nav .right{
+    opacity:0;
+}
+#apply .people{
+    padding-top:60px;
+    margin-bottom:20px;
+}
+#apply .people .people-list{
+    padding:0 20px;
+}
+#apply .people .people-list .people-item{
+    background:#fff;
+    width:100%;
+    margin-top:60px;
+    padding:10px 20px;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(39,40,50,0.1);
+}
+#apply .people .people-list .people-item .top{
+    display: flex;
+    position: relative;
+}
+#apply .people .people-list .people-item .top .left a{
+    display:inline-block;
+    padding:5px 22px;
+    border-radius:50px;
+    color:#fff;
+    background: #DC143C;
+    font-size:14px;
+}
+#apply .people .people-list .people-item .top .mid{
+    flex:1;
+    text-align: center;
+    height:20px;
+    position: relative;
+    top:-48px;
+
+}
+#apply .people .people-list .people-item .top .mid img{
+    display: inline-block;
+    border-radius:100%;
+}
+#apply .people .people-list .people-item .top .right a{
+    display:inline-block;
+    padding:5px 20px;
+    border-radius:50px;
+    color:#fff;
+    background: #3ebbe6;
+    font-size:14px;
+}
+#apply .people .people-list .people-item .center{
+    text-align: center;
+    margin-top:15px;
+}
+#apply .people .people-list .people-item .center .name{
+    color:#222;
+}
+#apply .people .people-list .people-item .center .time{
+    color:rgb(153, 153, 153);
+    font-size:14px;
+}
+#apply .people .people-list .people-item .bottom{
+    width:100%;
+    position: relative;
+    margin-top:20px;
+}
+#apply .people .people-list .people-item .bottom span{
+    position: absolute;
+    left:14px;
+    top:8px;
+    color:#666;
+    font-size:14px;
+}
+#apply .people .people-list .people-item .bottom input{
+    width:100%;
+    padding:10px 10px 10px 50px;
+    background:#f5f6ff;
+    border:0;
+    outline: none;
+    border-radius:10px;
+}

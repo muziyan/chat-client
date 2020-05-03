@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:rgba(0,0,0,0); 
+}
+ul,li{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration:none;
+}
+body{
+    color:#03081a;
+    font-size:14px;
+}
+#login{
+    width:100%;
+    height:100vh;
+    position: relative;
+    background:#fff;
+}
+#login .logo-container{
+    width:100%;
+    padding-top:90px;
+    padding-bottom:30px;
+}
+#login .logo-container .logo{
+    display: block;
+    width:45%;
+    margin:0 auto;
+}
+#login .form-container{
+    width:100%;
+}
+#login .form-container form{
+    width:80%;
+    margin:0 auto;
+}
+#login .form-container form div{
+    width:100%;
+}
+#login .form-container form div input{
+    width:100%;
+    border-radius:50px;
+    padding:20px 0;
+    text-align: center;
+    border:0;
+    background:#f2f3f7;
+    font-size:20px;
+    outline: none;
+    caret-color:#00cafc;
+}
+#login .form-container form .password{
+    margin-top:15px;
+    position: relative;
+}
+#login .form-container form .password i{
+    position: absolute;
+    left:25px;
+    top:35%;
+    font-size:1.3rem;
+    color:#b5b8c3;
+}
+#login .form-container form button{
+    display:block;
+    width:70px;
+    height:70px;
+    border-radius:100%;
+    background:#e9ebf2;
+    margin:50px auto;
+    outline: none;
+    border:0;
+}
+#login .form-container form .active{
+    background: linear-gradient(135deg,#72edf1 10%,#5151e6 100%);
+}
+#login .form-container form button i{
+    color:#fff;
+    font-size:30px;
+}
+#login .register-container{
+    width:100%;
+    text-align: center;
+    font-size:16px;
+    position: relative;
+    bottom:-100px;
+}
+#login .register-container a{
+    color:#999;
+}
+#login .register-container span{
+    color:#d2d4d9;
+    margin:0 35px;
+}

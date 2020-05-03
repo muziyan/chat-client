@@ -1,0 +1,239 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+ul,li{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration:none;
+}
+#gd{
+    width:100%;
+    height:100vh;
+}
+#gd .bg{
+    position: fixed;
+    z-index:-10;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+#gd .bg img{
+    display: block;
+    width:100%;
+}
+#gd .nav{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:1;
+    width:100%;
+    height:56px;
+    padding:8px 20px;
+    font-size:30px;
+    color:#222;
+}
+#gd .group-img{
+    padding-top:56px;
+    height:50vh;
+}
+#gd .group-container{
+    padding:25px 0px;
+    background:#fff;
+    min-height:50vh;
+    border-radius:20px 20px 0 0;
+}
+#gd .group-name{
+    border-bottom:1px solid #eee;
+    padding-bottom:10px;
+}
+#gd .group-name .top{
+    display: flex;
+    padding:0 20px;
+    justify-content: center;
+    align-items: center;
+}
+#gd .group-name .top .left{
+    flex:1;
+    font-size:22px;
+    font-weight:600;
+}
+#gd .group-name .top .right{
+    font-size:14px;
+    color:rgba(39, 40, 50, .5);
+}
+#gd .group-name .center{
+    padding:10px 20px;
+}
+#gd .group-name .center p{
+    font-size:14px;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+#gd .group-meb{
+    padding:10px 20px;
+    border-bottom:1px solid #eee;
+}
+#gd .group-meb .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gd .group-meb .top .left{
+    flex:1;
+    font-size:18px;
+    color:#222;
+    font-weight:600;
+}
+#gd .group-meb .top .right{
+    font-size:14px;
+    color:rgba(39, 40, 50, .5);
+}
+#gd .group-meb .top .right i{
+    margin-left:6px;
+}
+#gd .group-meb .center .meb-list{
+    display: flex;
+    flex-wrap:wrap;
+    width:100%;
+}
+#gd .group-meb .center .meb-list .meb-item{
+    padding-top:10px;
+    width:20%;
+    text-align: center;
+}
+#gd .group-meb .center .meb-list .db{
+    display: none;
+}
+#gd .group-meb .center .meb-list .meb-item img{
+    border-radius:10px;
+}
+#gd .group-meb .center .meb-list .meb-item span{
+    display:inline-block;
+    font-size:14px;
+    width:52px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+#gd .group-meb .center .meb-list .meb-item p{
+    display:inline-block;
+    line-height:52px;
+    width:52px;
+    height:52px;
+    background:#3ebbe6;
+    color:#fff;
+    border-radius:10px;
+}
+#gd .group-meb .center .meb-list .meb-item .add{
+    padding-top:3px;
+}
+#gd .group-age{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+#gd .group-age>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:17px 20px;
+}
+#gd .group-age>div .left{
+    font-size:16px;
+    color:#222;
+    margin-right:15px;
+}
+#gd .group-age>div .mid{
+    flex:1;
+    color:rgba(39, 40, 50, .6);
+    width:80%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+#gd .group-age>div .right{
+    color:#777;
+}
+#gd .footer{
+    background:#fff;
+    text-align: center;
+    padding-top:25px;
+}
+#gd .footer a{
+    color: #3EBBE6;
+}
+#gd .sign-modify{
+    position: fixed;
+    left:0;
+    bottom:0;
+    z-index:11;
+    height:100vh;
+    width:100%;
+    background:#fff;
+}
+#gd .sign-modify .topbar{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding:13px 20px;
+    background:#fff;
+    border-bottom:1px solid #eee;
+    color:#222;
+}
+#gd .sign-modify .topbar .mid{
+    flex:1;
+    font-size:20px;
+    text-align:center;
+}
+#gd .sign-modify .topbar .right{
+    color:#4aaaff;
+}
+#gd .sign-modify .content{
+    margin-top:20px;
+    padding:0 20px;
+    width:100%;
+}
+#gd .sign-modify .content .pwd{
+    background:#f3f4f6;
+    border:0;
+    outline:0;
+    width:100%;
+    border-radius:10px;
+    font-size:16px;
+    padding:10px;
+    margin-bottom:20px;
+}
+#gd .sign-modify .content .content-msg{
+    background:#f3f4f6;
+    border:0;
+    outline:0;
+    width:100%;
+    height:35vh;
+    padding:10px;
+    font-size:16px;
+    resize:none;
+    border-radius:10px;
+}
+
+.fade{
+    position: fixed;
+    width:100%;
+}
+.fade-enter-active {
+    animation: popup .5s;
+}
+.fade-leave-active {
+    animation: popup .5s reverse;
+}
+
+@keyframes popup{
+    0% {bottom:-80vh}
+    100% {bottom:0px}
+}

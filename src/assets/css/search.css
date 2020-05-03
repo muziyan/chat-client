@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration:none;
+}
+#search .search-container{
+    position: fixed;
+    width:100%;
+}
+#search .search-container .search{
+    padding:10px 20px;
+    width:100%;
+    background:#fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+#search .search-container i{
+    position: absolute;
+    left:10%;
+    color:#555;
+}
+#search .search-container input{
+    flex:1;
+    border:0;
+    outline: none;
+    padding:10px 10px 10px 35px;
+    background:#f5f6ff;
+    border-radius:50px;
+    font-size:16px;
+}
+#search .search-container span{
+    color:#3EBBE6;
+    margin-left:15px;
+}
+#search .user-container{
+    padding:58px 20px 0px 20px;
+    background:#fff;
+}
+#search .user-container .title{
+    color:#222;
+    margin-bottom:10px;
+}
+#search .user-container .user-list .user-item{
+    display: flex;
+    align-items: center;
+    padding:6px 0;
+}
+#search .user-container .user-list .user-item .left img{
+    border-radius:10px;
+}
+#search .user-container .user-list .user-item .mid{
+    flex:1;
+    margin-left:15px;
+}
+#search .user-container .user-list .user-item .mid .email{
+    font-size:12px;
+}
+#search .user-container .user-list .user-item .right span{
+    padding:3px 8px;
+    border-radius:50px;
+}
+#search .user-container .user-list .user-item .right .send{
+    background:#3EBBE6;
+    color:#fff;
+}
+#search .user-container .user-list .user-item .right .add{
+    color:#3EBBE6;
+    background:#eee;
+}
+#search .group-container{
+    padding:0px 20px;
+    background:#fff;
+}
+#search .group-container .title{
+    color:#222;
+    padding-top:15px;
+    margin-bottom:10px;
+}
+#search .group-container .group-list .group-item{
+    display: flex;
+    align-items: center;
+    padding:6px 0;
+}
+#search .group-container .group-list .group-item .left img{
+    border-radius:10px;
+}
+#search .group-container .group-list .group-item .mid{
+    flex:1;
+    margin-left:15px;
+}
+#search .group-container .group-list .group-item .right .active{
+    display: block;
+}
+#search .group-container .group-list .group-item .right span{
+    display: none;
+    padding:3px 8px;
+    border-radius:50px;
+}
+#search .group-container .group-list .group-item .right .send{
+    background:#3EBBE6;
+    color:#fff;
+}
+#search .group-container .group-list .group-item .right .add{
+    color:#3EBBE6;
+    background:#eee;
+}

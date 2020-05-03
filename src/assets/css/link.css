@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+#link{
+    padding:56px 0 59px 0;
+}
+#link .friends{
+    display: flex;
+    align-items:center;
+    padding:20px;
+    background:#fff;
+}
+#link .friends .flex-1{
+    flex:1;
+    font-size:18px;
+    color:#000;
+    font-weight:500;
+}
+#link .friends .apply{
+    display: inline-block;
+    font-size:12px;
+    line-height:20px;
+    width: 20px;
+    height: 20px;
+    text-align:center;
+    margin-right:10px;
+    background:#f74c31;
+    color:#fff;
+    border-radius:100%;
+}
+#link .friends i{
+    line-height:24px;
+    color:#999;
+}
+#link .carve{
+    width:100%;
+    height:12px;
+    background:#f5f6ff;
+}
+
+#link .nav{
+    display: flex;
+    padding:15px 20px;
+    background:#fff;
+}
+#link .nav .nav-item{
+    flex:1;
+    text-align: center;
+    padding:5px 0;
+}
+#link .nav .active{
+    border-radius:20px;
+    background:#e6faff;
+}
+#link .nav .active .nav-link{
+    color:#00cafc!important;
+}
+#link .nav .nav-item .nav-link{
+    color:#8c8f9d;
+}
+#link .myfriend{
+    width:100%;
+    padding:0 20px;
+    background:#fff;
+}
+#link .myfriend .friend{
+    padding:5px 0;
+    display: flex;
+}
+#link .myfriend .friend .left img{
+    border-radius:100%;
+}
+#link .myfriend .friend .right{
+    width:80%;
+    flex:1;
+    margin-left:10px;
+}
+#link .myfriend .friend .right h3{
+    font-weight:normal;
+    font-size:16px;
+}
+#link .myfriend .friend .right p{
+    font-size:14px;
+    color:#878b99;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+#link .mygroup{
+    width:100%;
+    padding:0 20px;
+    background:#fff;
+}
+#link .mygroup .group{
+    padding:5px 0;
+    display: flex;
+}
+#link .mygroup .left img{
+    border-radius:100%;
+}
+#link .mygroup .right{
+    margin-left:10px;
+}
+#link .mygroup .right h3{
+    font-size:16px;
+    font-weight:normal;
+    line-height:40px;
+}

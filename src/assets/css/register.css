@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color:rgba(0,0,0,0); 
+}
+ul,li{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration:none;
+}
+#register{
+    width:100%;
+    height:100vh;
+    padding:10px 30px;
+    background:#fff;
+}
+#register .back{
+    margin-left:-10px;
+    font-size:30px;
+}
+#register .back a{
+    color:#777;
+}
+#register .form-container{
+    width:100%;
+}
+#register .form-container .title{
+    font-size:30px;
+    font-weight:normal;
+    margin:10px 0 20px 0;
+}
+#register .form-container div{
+    border-bottom:1px solid #e4e5e6;
+    color:#7b7b7b;
+    padding-bottom:15px;
+    margin-bottom:15px;
+    font-size:18px;
+    position:relative;
+}
+#register .form-container div input{
+    border:0;
+    outline: none;
+    width:70%;
+    caret-color:#00cafc;
+    color:#000;
+    font-size:18px;
+}
+#register .form-container div span{
+    margin-right:20px;
+}
+#register .form-container div .occupy,
+#register .form-container div .invalid{
+    position: absolute;
+    right:0;
+    top:5px;
+    font-size:14px;
+    color:#ff5d5b;
+    margin-right:0;
+}
+#register .form-container div i{
+    position: absolute;
+    right:0;
+    top:5px;
+}
+#register .form-container div .yes{
+    color:#00ceff;
+    font-size:20px;
+}
+#register .form-container div button{
+    display: inline-block;
+    width:23%;
+    outline: none;
+    border:0;
+    background:#fff;
+    font-weight:600;
+    text-align:right;
+}
+#register .form-container div:nth-child(4) input{
+    width:50%;
+}
+#register .form-container .reg{
+    margin-top:30px;
+    background:#ccc;
+    border:0;
+    border-radius:10px;
+    outline:none;
+    width:100%;
+    padding:15px;
+    color:#fff;
+    font-size:20px;
+}
+#register .form-container .active{
+    background:#00ceff;
+}
