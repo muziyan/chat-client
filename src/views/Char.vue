@@ -22,14 +22,14 @@
             <p class="time">下午3:36</p>
             <div :class="items.name" v-for="(items,i) in chats" :key="i">
                 <img class="icon" :src="items.icon" width="40" height="40">
-                <p class="comment" v-if="items.commentType == 0" v-html="items.comment">
+                <p class="comment" v-if="items.commentType === 0" v-html="items.comment">
                     {{items.comment}}
                 </p>
-                <p class="comment-img" v-if="items.commentType == 1">
+                <p class="comment-img" v-if="items.commentType === 1">
                     <img :src="items.comment">
                 </p>
             </div>
-            <div id="gundong"></div>
+            <div ref="gd"></div>
         </div>
         <div class="footer">
             <div class="send-container">
@@ -41,7 +41,7 @@
                 </form>
             </div>
             <div class="icon-container">
-                <div class="voice">
+                <div class="voice" @click="isAudio">
                     <i class="fa fa-microphone" aria-hidden="true"></i>
                 </div>
                 <div class="image">
@@ -142,22 +142,24 @@ export default {
         }
     },
     methods:{
-        //新消息默认底部
-        handle:function(){
-            var chat = {};
-            chat.name = this.name;
-            chat.icon = this.icon;
-            chat.comment = this.comment;
-            chat.commentType = this.commentType;
-            this.chats.push(chat);
-            // this.$socket.emit("message",this.comment)
-            this.comment = '';
+        bottom:function(){
             setTimeout(
                 this.$nextTick(()=>{
-                    let gd = document.getElementById('gundong')
-                    gd.scrollIntoView()
-                }),200)
-
+                    this.$refs.gd.scrollIntoView()
+                }),200
+            )
+        },
+        //新消息默认底部
+        handle:function(){
+            var chat = {
+                name:this.name,
+                icon:this.icon,
+                comment:this.comment,
+                commentType:this.commentType,
+            };
+            this.chats.push(chat);
+            this.comment = '';
+            this.bottom()
         },
         back:function(){
             this.$router.go(-1);
@@ -168,12 +170,7 @@ export default {
     },
     //进消息刷新到底部
     mounted(){
-        setTimeout(
-            this.$nextTick(()=>{
-                let gd = document.getElementById('gundong')
-                gd.scrollIntoView()
-            }),100
-        )
+        this.bottom()
         // this.sockets.listener.subscribe("message",data=>{
         //     console.log(data)
         // })

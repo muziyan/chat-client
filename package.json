@@ -17,6 +17,7 @@
     "vue-awesome-swiper": "^4.1.1",
     "vue-cropper-h5": "^1.2.0",
     "vue-datetime": "^1.0.0-beta.13",
+    "vue-dictaphone": "^2.0.0",
     "vue-pickers": "^2.4.1",
     "vue-router": "^3.1.6",
     "vue-socket.io": "^3.0.8",

@@ -4,25 +4,39 @@
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+  name: 'App'
 }
+</script>
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-size:16px;
+    background:#F5F6FA;
+    -webkit-tap-highlight-color: transparent;
+}
+#app{
+    padding-top:var(--status-bar-height);
+}
+.search{
+    width:100%;
+    position: relative;
+    padding:10px 20px!important;
+    background:#fff;
+}
+.search p{
+    width:100%;
+    padding:10px 0;
+    background:#f5f6ff;
+    border-radius:50px;
+    font-size:16px;
+    text-align: center;
+    color:#b0b3bf;
+}
+.search p i{
+    margin-right:2px;
 }
 </style>

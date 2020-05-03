@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+#trends{
+    padding:56px 0 59px 0;
+}
+#trends .center>div{
+    padding:15px 20px;
+    background:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#trends .center>div .left{
+    width:10%;
+    font-size:24px;
+}
+#trends .center>div .mid{
+    flex:1;
+    color:#222;
+}
+#trends .center>div .right{
+    color:#222;
+    opacity:0.5;
+}
+#trends .center .github{
+    margin-bottom:12px;
+}
+#trends .center .github .left{
+    color:#181617;
+}
+#trends .center .html5 .left{
+    color:#EE6725;
+}
+#trends .center .twitter .left{
+    color:#1DA1F2;
+}
+#trends .center .facebook{
+    margin-bottom:12px;
+}
+#trends .center .facebook .left{
+    color:#1777E0;
+}
+#trends .center .basketball .left i{
+    background:#F7941D;
+    height:20px;
+    line-height:20px;
+    border-radius:100%;
+}
+#trends .center .google .left{
+    color:#dc4b3e;
+}

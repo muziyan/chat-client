@@ -99,18 +99,36 @@ a,a:hover{
 #gd .group-meb .top .right i{
     margin-left:6px;
 }
+#gd .group-meb .top .right .complete{
+    color:#3ebbe6;
+}
 #gd .group-meb .center .meb-list{
     display: flex;
     flex-wrap:wrap;
     width:100%;
 }
 #gd .group-meb .center .meb-list .meb-item{
+    position: relative;
     padding-top:10px;
     width:20%;
     text-align: center;
 }
 #gd .group-meb .center .meb-list .db{
     display: none;
+}
+#gd .group-meb .center .meb-list .meb-item .del{
+    display: none;
+    position: absolute;
+    background:#DC143C;
+    color:#fff;
+    width:18px;
+    height:18px;
+    border-radius:100%;
+    right:0;
+    top:0;
+}
+#gd .group-meb .center .meb-list .meb-item .active{
+    display: block;
 }
 #gd .group-meb .center .meb-list .meb-item img{
     border-radius:10px;
@@ -221,6 +239,39 @@ a,a:hover{
     resize:none;
     border-radius:10px;
 }
+#gd .sign-out{
+    position: fixed;
+    width:100%;
+    height:100vh;
+    left:0;
+    top:0;
+    z-index:1000;
+    padding:0 40px;
+    transform: translateZ(0);
+    background:rgba(0, 0, 0, .7);
+}
+#gd .sign-out .out-container{
+    margin-top:40vh;
+    background:#fff;
+    border-radius:5px;
+    padding:10px;
+}
+#gd .sign-out .out-container h3{
+    font-weight:normal;
+    font-size:18px;
+    margin-bottom:10px;
+}
+#gd .sign-out .out-container .btn{
+    margin-top:30px;
+    display: flex;
+}
+#gd .sign-out .out-container .btn .zw{
+    flex:1;
+}
+#gd .sign-out .out-container .btn a{
+    color:#3ebbe6;
+    border-radius:5px;
+}
 
 .fade{
     position: fixed;
@@ -233,6 +284,21 @@ a,a:hover{
     animation: popup .5s reverse;
 }
 
+.kade{
+    position: fixed;
+    width:100%;
+}
+.kade-enter-active {
+    animation: out 0;
+}
+.kade-leave-active {
+    animation: out 0 reverse;
+}
+
+@keyframes out{
+    0% {top:-100vh;}
+    100% {top:0;}
+}
 @keyframes popup{
     0% {bottom:-80vh}
     100% {bottom:0px}

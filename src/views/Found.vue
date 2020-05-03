@@ -52,55 +52,55 @@ import H5Cropper from "vue-cropper-h5";
 export default {
     data(){
         return{
-            groupAvatar:'/static/images/9.jpg',
+            groupAvatar:'/images/9.jpg',
             option:{},
             sum:0,
             users:[
                 {
                     id:1,
-                    avatar:'/static/images/1.jpg',
+                    avatar:'/images/1.jpg',
                     username:'哈批🐎',
                     check:false
                 },
                 {
                     id:2,
-                    avatar:'/static/images/2.jpg',
+                    avatar:'/images/2.jpg',
                     username:'岛式老八',
                     check:false
                 },
                 {
                     id:3,
-                    avatar:'/static/images/3.jpg',
+                    avatar:'/images/3.jpg',
                     username:'带带大师兄',
                     check:false
                 },
                 {
                     id:4,
-                    avatar:'/static/images/4.jpg',
+                    avatar:'/images/4.jpg',
                     username:'金牌厨师',
                     check:false
                 },
                 {
                     id:5,
-                    avatar:'/static/images/5.jpg',
+                    avatar:'/images/5.jpg',
                     username:'抽象带篮子',
                     check:false
                 },
                 {
                     id:6,
-                    avatar:'/static/images/6.jpg',
+                    avatar:'/images/6.jpg',
                     username:'RNG污渍',
                     check:false
                 },
                 {
                     id:7,
-                    avatar:'/static/images/7.jpg',
+                    avatar:'/images/7.jpg',
                     username:'退役辅助山泥若',
                     check:false
                 },
                 {
                     id:8,
-                    avatar:'/static/images/8.jpg',
+                    avatar:'/images/8.jpg',
                     username:'斗鱼张顺飞',
                     check:false
                 }
