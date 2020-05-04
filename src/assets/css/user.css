@@ -42,6 +42,7 @@ a,a:hover{
 #user .lists{
     background:#fff;
     padding-top:66px;
+    border-bottom:1px solid #eee;
 }
 #user .lists>div{
     display: flex;
@@ -86,7 +87,6 @@ a,a:hover{
 }
 #user .pwd{
     border-top:1px solid #eee;
-    border-bottom:1px solid #eee;
 }
 #user .pwd .mid{
     font-size:12px;

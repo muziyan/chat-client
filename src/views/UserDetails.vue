@@ -17,10 +17,12 @@
                     <span>头像</span>
                 </div>
                 <div class="mid">
-                    <h5-cropper :option="option" @getbase64Data="getbase64Data"></h5-cropper>
+                    <h5-cropper v-if="id == 1" ref="upimg" :option="option" @getblobData="getFile">
+                        
+                    </h5-cropper>
                     <img :src="icon" width="56px" height="56px">
                 </div>
-                <div class="right">
+                <div v-if="id == 1" class="right">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </div>
             </div>
@@ -41,7 +43,7 @@
                 <div class="mid">
                     <span>{{this.sign}}</span>
                 </div>
-                <div class="right">
+                <div v-if="id == 1" class="right">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </div>
             </div>
@@ -63,7 +65,7 @@
                 <div class="mid">
                     <span>{{this.name}}</span>
                 </div>
-                <div class="right">
+                <div v-if="id == 1" class="right">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </div>
             </div>
@@ -74,11 +76,11 @@
                 <div class="mid">
                     <span>{{this.sex}}</span>
                 </div>
-                <div class="right">
+                <div v-if="id == 1" class="right">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </div>
             </div>
-            <VuePicker :data="pickData"
+            <VuePicker v-if="id == 1" :data="pickData"
             :showToolbar="true"
             @confirm="confirm"
             :visible.sync="pickerVisible"
@@ -88,9 +90,10 @@
                     <span>生日</span>
                 </div>
                 <div class="mid">
-                    <datetime input-style="color:#524a4a;border:0;font-size:16px;padding-top:6px;width:100%;" v-model="date" format="yyyy-MM-dd" class="theme-orange"></datetime>
+                    <datetime v-if="id == 1" input-style="color:#524a4a;border:0;font-size:16px;padding-top:6px;width:100%;" v-model="date" format="yyyy-MM-dd" class="theme-orange"></datetime>
+                    <span v-else>{{this.date}}</span>
                 </div>
-                <div class="right">
+                <div v-if="id == 1" class="right">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </div>
             </div>
@@ -101,7 +104,7 @@
                 <div class="mid">
                     <span>{{this.tel}}</span>
                 </div>
-                <div class="right">
+                <div v-if="id == 1" class="right">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </div>
             </div>
@@ -112,11 +115,11 @@
                 <div class="mid">
                     <span>{{this.email}}</span>
                 </div>
-                <div class="right">
+                <div v-if="id == 1" class="right">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </div>
             </div>
-            <div @click.prevent="Eject('密码',pwd,true)" class="pwd">
+            <div v-if="id == 1" @click.prevent="Eject('密码',pwd,true)" class="pwd">
                 <div class="left">
                     <span>密码</span>
                 </div>
@@ -129,9 +132,10 @@
             </div>
         </div>
         <div class="footer">
-            <a @click.prevent="">退出账号</a>
+            <a @click.prevent="" v-if="id == 1">退出账号</a>
+            <a @click.prevent="" v-else>删除好友</a>
         </div>
-        <transition class="fade" name="fade">
+        <transition v-if="id == 1" class="fade" name="fade">
             <div class="sign-modify" v-if="popup">
                 <div class="topbar">
                     <div class="left">
@@ -175,7 +179,7 @@ export default {
     props:{
         id:{
             required:true
-        }
+        },
     },
     data(){
         return{
@@ -203,6 +207,9 @@ export default {
       VuePicker,
       
     },
+    created(){
+        
+    },
     mounted(){
 
     },
@@ -225,23 +232,23 @@ export default {
             // this.result = JSON.stringify(res)
         },
         //头像
-        getbase64Data(data) {
-            this.icon = data;
+        getFile(blob) {
+            this.icon = window.URL.createObjectURL(blob)
         },
         //修改弹框
         Eject:function(type,data,ispwd){
-            this.popup = !this.popup
-            this.modifyTitle = type
+            this.popup = !this.popup //显示弹窗
+            this.modifyTitle = type //头部标题
             this.data = data
             this.ispwd = ispwd
         },
         EjectSubmit:function(){
-            this.Eject()
+            console.log(this.data)
         },
         //格式化时间
         ChangeTime:function(e){
             return myFun.detialTime(e)
-        }
+        },
     }
 }
 </script>
