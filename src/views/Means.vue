@@ -9,7 +9,7 @@
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                 </div>
                 <div class="end"></div>
-                <router-link tag="div" to="/means/userdetails/1" class="me">
+                <router-link v-if="this.tip === 1 || this.id == 1" tag="div" :to="`/means/userdetails/${this.id}`" class="me">
                     <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                 </router-link>
             </div>
@@ -36,7 +36,8 @@
             </div>
         </div>
         <div class="add-friend">
-            <a @click.prevent="Eject">加为好友</a>
+            <a @click.prevent="Eject" v-if="id != 1 && this.tip === 0">加为好友</a>
+            <a @click.prevent="Chat" v-else-if="id != 1 && this.tip === 1">发消息</a>
         </div>
         <transition class="fade" name="fade">
             <div class="add-misg" v-if="show">
@@ -59,6 +60,7 @@
 </template>
 
 <script>
+import data from '../assets/js/data.js'
 export default {
     props:{
         id:{
@@ -68,6 +70,7 @@ export default {
     data(){
         return{
             myname:'十二',
+            tip:0,
             user:{
                 name:'带带大师兄',
                 user:'5831261',
@@ -82,7 +85,24 @@ export default {
         },
         Eject:function(){
             this.show = !this.show
+        },
+        Chat:function(){
+            this.$router.push({path: `/char/${this.id}`})
+        },
+        isFriend:function(){
+            let tip = 0
+            let arr = data.isFriend()
+            arr.forEach(v=>{
+                if(v.firend == this.id){
+                    tip = 1;
+                }
+            })
+            this.tip = tip
+            // console.log(tip)
         }
+    },
+    mounted(){
+        this.isFriend()
     }
 }
 </script>

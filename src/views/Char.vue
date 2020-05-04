@@ -12,7 +12,7 @@
                     <p class="online">在线</p>
                 </div>
                 <div class="means">
-                    <router-link tag="a" to="/means/1">
+                    <router-link tag="a" :to="`/means/${this.id}`">
                         <i class="fa fa-bars" aria-hidden="true"></i>
                     </router-link>
                 </div>
@@ -30,6 +30,14 @@
                         <img :src="items.comment">
                     </p>
                 </div>
+            <div :class="items.name" v-for="(items,i) in chats" :key="i">
+                <img class="icon" :src="items.icon" width="40" height="40" @click="Fprofile">
+                <p class="comment" v-if="items.commentType === 0" v-html="items.comment">
+                    {{items.comment}}
+                </p>
+                <p class="comment-img" v-if="items.commentType === 1">
+                    <img :src="items.comment">
+                </p>
             </div>
             <div ref="gd"></div>
         </div>
@@ -44,6 +52,7 @@
             </div>
             <div class="icon-container">
                 <div class="voice"> <!--@click="isAudio"-->
+                <div class="voice">
                     <i class="fa fa-microphone" aria-hidden="true"></i>
                 </div>
                 <div class="image">
@@ -171,6 +180,9 @@ export default {
         back:function(){
             this.$router.go(-1);
         },
+        Fprofile:function(){
+            this.$router.push({path: `/means/${this.id}`});
+        }
     },
     sockets:{
         message(data){
