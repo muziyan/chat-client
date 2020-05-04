@@ -9,12 +9,14 @@ const routes = [
   {
     path:'/login',
     name:'login',
-    component:Login
+    component:Login,
+    mate:"login"
   },
   {
     path:'/register',
     name:'register',
-    component:Register
+    component:Register,
+    mate:"register"
   },
   {
     path:'/',
@@ -75,7 +77,7 @@ router.afterEach((to,from,next) => {
 })
 
 router.beforeEach(((to, from, next) => {
-  if (!localStorage.token && !localStorage.user && to.path !== "/login"){
+  if (!localStorage.token && !localStorage.user && to.path !== "/login" && to.path !== "/register"){
     return next("/login")
   }
   return next()

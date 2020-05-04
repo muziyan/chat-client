@@ -92,7 +92,7 @@ export default {
         //判断账号
         isUser:function(){
             let reg = /^[a-zA-Z0-9]{5,10}$/;
-            if(this.user.chat_id && this.user.chat_id.length > 5 && this.user.chat_id.length < 10){
+            if(this.user.chat_id && this.user.chat_id.length > 5 && this.user.chat_id.length < 11){
                 if(reg.test(this.user.chat_id)){
                     this.checkChatId()
                 }

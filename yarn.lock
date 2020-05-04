@@ -8560,6 +8560,13 @@ vue-datetime@^1.0.0-beta.13:
   resolved "https://registry.npm.taobao.org/vue-datetime/download/vue-datetime-1.0.0-beta.13.tgz#ac874b7961a1ab00bddeaceb6d10ab01ce797e60"
   integrity sha1-rIdLeWGhqwC93qzrbRCrAc55fmA=
 
+vue-dictaphone@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/vue-dictaphone/download/vue-dictaphone-2.0.0.tgz#ed2554bb07b8e9736bc744e1647bae40d7d8af91"
+  integrity sha1-7SVUuwe46XNrx0ThZHuuQNfYr5E=
+  dependencies:
+    vue "^2.6.11"
+
 vue-eslint-parser@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-7.0.0.tgz#a4ed2669f87179dedd06afdd8736acbb3a3864d6"

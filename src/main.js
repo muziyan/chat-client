@@ -26,7 +26,8 @@ import "./plugins/socket"
 new Vue({
   router,
   data:{
-    user:localStorage.user ? JSON.parse(localStorage.user) : false
+    user:localStorage.user ? JSON.parse(localStorage.user) : false,
+    loginStatus:false,
   },
   methods:{
     getUser(){
@@ -34,11 +35,19 @@ new Vue({
         this.user = res.data;
         localStorage.user = JSON.stringify(res.data);
       })
+    },
+    logout(){
+      localStorage.clear();
+      this.loginStatus = false;
+      this.$router.push("/login")
     }
   },
-  sockets:{
-    connect(){
-      console.log("连接成功！")
+  mounted(){
+    if (this.loginStatus){
+      this.$socket.emit("authorization",{userId:this.user.id})
+      this.sockets.listener.subscribe("socketAuth",data =>{
+        this.user.socketId = data;
+      })
     }
   },
   created(){

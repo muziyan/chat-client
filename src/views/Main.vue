@@ -3,7 +3,7 @@
         <div class="header">
             <div class="nav-container">
                 <router-link tag="div" to="/means/1" class="icon">
-                    <img src="../assets/images/icon.jpg" width="40" height="auto">
+                    <img :src="$root.user.avatar" width="40" height="auto">
                 </router-link>
                 <div class="title">
                     <span :class="{active:active === i}" v-for="(item,i) in title" :key="i">{{item}}</span>

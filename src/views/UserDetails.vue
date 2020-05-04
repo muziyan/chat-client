@@ -53,7 +53,7 @@
                     <span>{{ChangeTime(this.regist)}}</span>
                 </div>
                 <div class="right">
-                    
+
                 </div>
             </div>
             <div @click.prevent="Eject('名称',name,false)" class="name">
@@ -129,7 +129,7 @@
             </div>
         </div>
         <div class="footer">
-            <a @click.prevent="">退出账号</a>
+            <a @click.prevent="$root.logout">退出账号</a>
         </div>
         <transition class="fade" name="fade">
             <div class="sign-modify" v-if="popup">
@@ -201,7 +201,7 @@ export default {
     components: {
       H5Cropper,
       VuePicker,
-      
+
     },
     mounted(){
 

@@ -53,6 +53,7 @@ export default {
         login:function(){
             this.$http.post("/login",this.user).then(res =>{
                 localStorage.token = res.data.token;
+                this.$root.loginStatus = true;
                 this.$router.push("/")
             })
         }

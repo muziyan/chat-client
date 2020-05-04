@@ -20,14 +20,16 @@
         </div>
         <div class="main">
             <p class="time">下午3:36</p>
-            <div :class="items.name" v-for="(items,i) in chats" :key="i">
-                <img class="icon" :src="items.icon" width="40" height="40">
-                <p class="comment" v-if="items.commentType === 0" v-html="items.comment">
-                    {{items.comment}}
-                </p>
-                <p class="comment-img" v-if="items.commentType === 1">
-                    <img :src="items.comment">
-                </p>
+            <div v-for="(items,i) in chats">
+                <div :class="items.name" :key="i">
+                    <img class="icon" :src="items.icon" width="40" height="40">
+                    <p class="comment" v-if="items.commentType === 0" v-html="items.comment">
+                        {{items.comment}}
+                    </p>
+                    <p class="comment-img" v-if="items.commentType === 1">
+                        <img :src="items.comment">
+                    </p>
+                </div>
             </div>
             <div ref="gd"></div>
         </div>
@@ -41,7 +43,7 @@
                 </form>
             </div>
             <div class="icon-container">
-                <div class="voice" @click="isAudio">
+                <div class="voice"> <!--@click="isAudio"-->
                     <i class="fa fa-microphone" aria-hidden="true"></i>
                 </div>
                 <div class="image">
@@ -157,6 +159,11 @@ export default {
                 comment:this.comment,
                 commentType:this.commentType,
             };
+            this.$socket.emit(`message`, {
+                id:this.id === 2 ? 0 : 2,
+                message:this.comment,
+                commentType:this.commentType
+            })
             this.chats.push(chat);
             this.comment = '';
             this.bottom()
@@ -166,14 +173,18 @@ export default {
         },
     },
     sockets:{
-
+        message(data){
+            console.log(data)
+        }
     },
     //进消息刷新到底部
     mounted(){
         this.bottom()
-        // this.sockets.listener.subscribe("message",data=>{
-        //     console.log(data)
-        // })
+        console.log(this.$root.user.id)
+        console.log(this.$root.user)
+        this.sockets.listener.subscribe(`message ${this.id === 2 ? 0 : 2}`,data=>{
+            console.log(data)
+        })
     },
     updated(){
 

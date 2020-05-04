@@ -1,11 +1,10 @@
 module.exports = {
     lintOnSave:false,
     devServer: {
-        host: '0.0.0.0',
         disableHostCheck: true,
         proxy:{
-            "/":{
-                target:"http://localhost:8000",
+            "/socket.io":{
+                target:"http://localhost:8000"
             }
         }
     }
