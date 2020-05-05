@@ -20,7 +20,7 @@
         </div>
         <div class="main">
             <p class="time">下午3:36</p>
-            <div v-for="(items,i) in chats">
+            <!--<div v-for="(items,i) in chats">
                 <div :class="items.name" :key="i">
                     <img class="icon" :src="items.icon" width="40" height="40">
                     <p class="comment" v-if="items.commentType === 0" v-html="items.comment">
@@ -29,7 +29,7 @@
                     <p class="comment-img" v-if="items.commentType === 1">
                         <img :src="items.comment">
                     </p>
-                </div>
+                </div>-->
             <div :class="items.name" v-for="(items,i) in chats" :key="i">
                 <img class="icon" :src="items.icon" width="40" height="40" @click="Fprofile">
                 <p class="comment" v-if="items.commentType === 0" v-html="items.comment">
