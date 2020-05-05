@@ -200,7 +200,7 @@ a,a:hover{
     justify-content: center;
     align-items: center;
 }
-#char .footer .icon-container div{
+#char .footer .icon-container>div{
     flex:1;
     text-align: center;
     padding:4px 0;
@@ -211,4 +211,14 @@ a,a:hover{
 #char .footer .icon-container .map i,
 #char .footer .icon-container .emoji i{
     font-size:24px;
+}
+#char .footer .icon-container .image{
+    position: relative;
+}
+#char .footer .icon-container .image .upbtn{
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
 }
