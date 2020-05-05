@@ -51,12 +51,12 @@
                 </form>
             </div>
             <div class="icon-container">
-                <div class="voice"> <!--@click="isAudio"-->
                 <div class="voice">
                     <i class="fa fa-microphone" aria-hidden="true"></i>
                 </div>
                 <div class="image">
                     <i class="fa fa-picture-o" aria-hidden="true"></i>
+                    <h5-cropper :option="option" @getblobData="getFile"></h5-cropper>
                 </div>
                 <div class="camera">
                     <i class="fa fa-camera" aria-hidden="true"></i>
@@ -74,11 +74,15 @@
 
 
 <script>
+import H5Cropper from "vue-cropper-h5";
 export default {
     props:{
         id:{
             required:true
         }
+    },
+    components: {
+      H5Cropper,
     },
     data(){
         return{
@@ -182,7 +186,11 @@ export default {
         },
         Fprofile:function(){
             this.$router.push({path: `/means/${this.id}`});
-        }
+        },
+        getFile(blob) {
+            this.comment = window.URL.createObjectURL(blob)
+            this.handle()
+        },
     },
     sockets:{
         message(data){
