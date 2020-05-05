@@ -15,7 +15,7 @@ a,a:hover{
     height:100vh;
 }
 #char .header{
-    z-index:999;
+    z-index:10;
     background:linear-gradient(135deg,#00d7ff 10%,#00a8ff 100%);
     position:fixed;
     top:0;
