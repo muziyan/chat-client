@@ -14,7 +14,7 @@
         <div class="group">
             <div class="top">
                 <div class="group-img">
-                    <h5-cropper :option="option" @getbase64Data="getbase64Data"></h5-cropper>
+                    <h5-cropper :option="option" @getblobData="getFile"></h5-cropper>
                     <i class="fa fa-pencil" aria-hidden="true"></i>
                     <img :src="groupAvatar" width="100" height="100">
                 </div>
@@ -111,8 +111,8 @@ export default {
       H5Cropper,
     },
     methods:{
-        getbase64Data(data) {
-            this.groupAvatar = data;
+        getFile(blob){
+            this.groupAvatar = window.URL.createObjectURL(blob)
         },
         back(){
             this.$router.go(-1)
