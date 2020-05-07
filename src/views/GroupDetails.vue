@@ -1,6 +1,6 @@
 <template>
     <div id="gd">
-        <div class="bg">
+        <div class="bag">
             <img :src="groupAvatar">
         </div>
         <div class="nav">
