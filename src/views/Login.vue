@@ -8,7 +8,7 @@
         <div class="form-container">
             <form @submit.prevent="login">
                 <div class="user">
-                    <input id="user" type="text" placeholder="账号/邮箱" autocomplete='off' required  v-model="user.chat_id"/>
+                    <input type="text" placeholder="账号/邮箱" autocomplete='off' required  v-model="user.chat_id"/>
                 </div>
                 <div class="password">
                     <i class="fa" :class="icon" aria-hidden="true" @click="showPassword"></i>
