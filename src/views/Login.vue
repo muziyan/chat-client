@@ -54,6 +54,7 @@ export default {
             this.$http.post("/login",this.user).then(res =>{
                 localStorage.token = res.data.token;
                 this.$root.loginStatus = true;
+                this.$root.getUser()
                 this.$router.push("/")
             })
         }
