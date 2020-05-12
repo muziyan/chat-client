@@ -54,10 +54,10 @@
                 <div class="voice">
                     <i class="fa fa-microphone" aria-hidden="true"></i>
                 </div>
-                <div class="image">
-                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                    <h5-cropper :option="option" @getblobData="getFile"></h5-cropper>
-                </div>
+<!--                <div class="image">-->
+<!--                    <i class="fa fa-picture-o" aria-hidden="true"></i>-->
+<!--                    <h5-cropper :option="option" @getblobData="getFile"></h5-cropper>-->
+<!--                </div>-->
                 <div class="camera">
                     <i class="fa fa-camera" aria-hidden="true"></i>
                 </div>
@@ -166,14 +166,16 @@ export default {
         },
         //新消息默认底部
         handle:function(){
-            var chat = {
+            let chat = {
                 name:this.name,
                 icon:this.icon,
                 comment:this.comment,
                 commentType:this.commentType,
             };
-            this.$socket.emit(`message`, {
-                id:this.id === 2 ? 0 : 2,
+            this.$socket.emit(`message`,{
+                query:{
+                    id:this.$root.user.id
+                },
                 message:this.comment,
                 commentType:this.commentType
             })
@@ -197,17 +199,12 @@ export default {
             console.log(data)
         }
     },
-    //进消息刷新到底部
     mounted(){
+        //进消息刷新到底部
         this.bottom()
-        console.log(this.$root.user.id)
-        console.log(this.$root.user)
-        this.sockets.listener.subscribe(`message ${this.id === 2 ? 0 : 2}`,data=>{
+        this.sockets.listener.subscribe(`message`,data=>{
             console.log(data)
         })
-    },
-    updated(){
-
     }
 }
 </script>

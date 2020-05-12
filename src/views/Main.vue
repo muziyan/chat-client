@@ -66,9 +66,6 @@ export default {
     },
     created(){
         this.activeNav()
-        this.$http.get("/user-requests/1").then(res=>{
-            console.log(res)
-        })
     }
 }
 </script>

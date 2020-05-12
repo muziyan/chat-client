@@ -37,21 +37,22 @@ new Vue({
       })
     },
     logout(){
-      localStorage.clear();
+      this.$http.get("/logout");
       this.loginStatus = false;
+      localStorage.clear();
       this.$router.push("/login")
     }
   },
-  mounted(){
-    if (this.loginStatus){
-      this.$socket.emit("authorization",{userId:this.user.id})
-      this.sockets.listener.subscribe("socketAuth",data =>{
-        this.user.socketId = data;
-      })
-    }
+  sockets:{
+
   },
   created(){
     if (localStorage.token && !this.user) this.getUser();
+  },
+  destroy(){
+    console.log(111)
+    debugger;
+    this.logout();
   },
   render: h => h(App)
 }).$mount('#app')
