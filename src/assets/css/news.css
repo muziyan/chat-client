@@ -49,7 +49,7 @@ a,a:hover{
 #news .news-list .news-item .mid .content{
     display:inline-block;
     font-size:14px;
-    width:90%;
+    width:70vw;
     color:#878b99;
     overflow:hidden;
     text-overflow:ellipsis;
